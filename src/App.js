@@ -5,7 +5,7 @@ import { useSpring, animated } from 'react-spring';
 import About from './Components/Content/About';
 import Contact from './Components/Content/Contact';
 import More from './Components/Content/More';
-import Projects from './Components/Content/Projects';
+import Projects from './Components/Content/Projects/Projects';
 import TechStack from './Components/Content/TechStack';
 import Footer from './Components/Footer/Footer';
 
@@ -33,38 +33,38 @@ function App() {
   return (
     <div className="App">
 
-      <animated.div style={titleProps}>
+      <animated.div className="title-parent" style={titleProps}>
         <TitleBar />
       </animated.div>
 
-      <animated.div style={navProps}>
+      <animated.div className="nav-parent" style={navProps}>
         <SideNav />
       </animated.div>
 
-        <Routes>
-          <Route path="/" element={
-            <About />
-          } />
+      <Routes>
+        <Route path="/" element={
+          <About />
+        } />
 
-          <Route path="contact" element={
-            <Contact />
-          } />
+        <Route path="contact" element={
+          <Contact />
+        } />
 
         <Route path="more" element={
-            <More />
-          } />
+          <More />
+        } />
 
-          <Route path="projects" element={
-            <Projects />
-          } />
+        <Route path="projects" element={
+          <Projects />
+        } />
 
-          <Route path="tech-stack" element={
-            <TechStack />
-          } />
+        <Route path="tech-stack" element={
+          <TechStack />
+        } />
 
-        </Routes>
+      </Routes>
 
-        <animated.div style={footerProps}>
+      <animated.div className="footer-parent" style={footerProps}>
         <Footer />
       </animated.div>
 

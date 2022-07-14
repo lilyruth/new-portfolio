@@ -2,23 +2,19 @@ import { Link } from 'react-router-dom'
 
 function SideNav() {
  return (
-  <div className="sidenav-parent">
-   <div className="menu-about">
-    <Link className="nav-links" to="/">about</Link>
-   </div>
-   <div className="menu-projects">
-   <Link className="nav-links" to="projects">projects</Link>
-   </div>
-   <div className="menu-more">
-   <Link className="nav-links" to="more">more</Link>
-   </div>
-   <div className="menu-tech-stack">
-   <Link className="nav-links" to="tech-stack">tech stack</Link>
-   </div>
-   <div className="menu-contact">
-   <Link className="nav-links" to="contact">contact</Link>
-   </div>
-  </div>
+  <ul className="sidenav-parent">
+  
+    <li><Link className="menu-about nav-links" to="/">about</Link></li>
+  
+    <li><Link className="menu-projects nav-links" to="projects">projects</Link></li>
+
+    <li><Link className="menu-more nav-links" to="more">more</Link></li>
+
+    <li><Link className="menu-tech-stack nav-links" to="tech-stack">tech stack</Link></li>
+
+    <li><Link className="menu-contact nav-links" to="contact">contact</Link></li>
+
+  </ul>
  )
 }
 
