@@ -3,7 +3,7 @@ import SideNav from './Components/Side-Nav/SideNav';
 import { Routes, Route } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring';
 import About from './Components/Content/About';
-import Contact from './Components/Content/Contact';
+import Contact from './Components/Content/Contact/Contact';
 import More from './Components/Content/More/More';
 import Projects from './Components/Content/Projects/Projects';
 import TechStack from './Components/Content/TechStack/TechStack';
