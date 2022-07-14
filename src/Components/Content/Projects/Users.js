@@ -14,7 +14,7 @@ function Users() {
     <h1>Retrieving Users and Posts from an API</h1>
     <div className="projects-media">
       <div className="youtube">
-        <img className="usersGIF" src={usersGif} />
+        <img className="usersGIF" src={usersGif} alt="screenshot of a project using the jsonplaceholder api"/>
       </div>
       <div className="explanation">
         This is a simple API retrieval app written in vanilla JS:

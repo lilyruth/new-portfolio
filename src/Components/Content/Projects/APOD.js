@@ -14,7 +14,7 @@ function APOD() {
       <h1>NASA Photo of the Day</h1>
       <div className="projects-media">
         <div className="youtube">
-          <img className="apodGIF" src={apodGif} />
+          <img className="apodGIF" src={apodGif} alt="screenshot of app retrieving images from the NASA photo of the day API" />
         </div>
         <div className="explanation">
           This is a simple API retrieval app:

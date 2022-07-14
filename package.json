@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/fredoka-one": "^4.5.7",
     "@fontsource/maven-pro": "^4.5.10",
     "@fontsource/nothing-you-could-do": "^4.5.7",
+    "@formspree/react": "^2.3.0",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-brands-svg-icons": "^6.1.1",
     "@fortawesome/free-regular-svg-icons": "^6.1.1",

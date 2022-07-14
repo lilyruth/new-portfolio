@@ -6,6 +6,7 @@
   --light-cream: #F1F9F9;
   --header-font: 'Nothing You Could Do', sans-serif;
   --body-font: 'Maven Pro', sans-serif;
+  --display-font: 'Fredoka One', sans-serif;
 }
 
 * {
@@ -117,11 +118,57 @@ nav,
   font-family: var(--body-font);
   color: var(--main-text);
   font-size: 1.25rem;
-  width: 100%;
   display: grid;
   grid-gap: 0;
   grid-template-rows: repeat(1fr, 40);
   grid-template-columns: repeat(1fr, 5);
+}
+
+.more-parent, .tech-parent, .contact-parent {
+  grid-row: 5/28;
+  grid-column: 1/14;
+  margin: 0 auto;
+  width: 100%;
+  font-family: var(--body-font);
+  color: var(--main-text);
+  font-size: 1.25rem;
+}
+
+.tech-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 30rem;
+  text-align: center;
+  font-size: 5rem;
+  font-family: var(--display-font);
+}
+
+.leetcode, .codepen {
+  margin: 2rem;
+  padding-top: 2rem;
+}
+
+.leetcode img, .codepen img {
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 2px #3f4359;
+}
+
+.leetcode a, .codepen a {
+  cursor: pointer;
+  padding-top: 1rem;
+}
+
+.leetcode-text, .codepen-text {
+  max-width: 20rem;
+  padding-top: 2rem;
 }
 
 .projects-menu {
@@ -140,6 +187,10 @@ nav,
 .projects-view {
   grid-column: 1/6;
   grid-row: 2/41;
+}
+
+.youtube {
+  padding-top: 2rem;
 }
 
 .none {
@@ -175,6 +226,10 @@ iframe {
   text-align: center;
   display: block;
 }
+
+.apod .explanation {
+  padding-top: 2rem;
+}
 .explanation {
   max-width: 30rem;
 }
@@ -194,6 +249,11 @@ iframe {
   padding: .5rem;
 }
 
+.more-parent h1 {
+  text-align: center;
+  padding: 1rem 0;
+}
+
 .apod h2, .users h2 {
   padding: 1rem 0;
 }
@@ -207,6 +267,19 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}
+
+.more-view {
+  display: flex; 
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .projects-media {
@@ -294,7 +367,14 @@ iframe {
   cursor: pointer;
   border-bottom: 2px solid var(--accent);
 }
-
+@media screen and (max-width: 1535px) {
+  .tech-container {
+    font-size: 4rem;
+    height: 20rem;
+    margin: 0 auto;
+    max-width: 60rem;
+  }
+}
 @media screen and (max-width: 1498px) {
 
   .nav-parent {
@@ -304,7 +384,7 @@ iframe {
     grid-column: 1/13;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent, .tech-parent, .contact-parent {
     grid-column: 1/13;
   }
 }
@@ -318,12 +398,12 @@ iframe {
     grid-column: 1/12;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent .tech-parent, .contact-parent  {
     grid-column: 1/12;
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1301px) {
 
   .nav-parent {
     grid-column: 11/17;
@@ -332,8 +412,16 @@ iframe {
     grid-column: 1/11;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent, .contact-parent  {
     grid-column: 1/11;
+  }
+
+  .tech-parent {
+    grid-column: 2/10;
+  }
+
+  .tech-container {
+    font-size: 3rem;
   }
 }
 
@@ -346,13 +434,18 @@ iframe {
     grid-column: 1/10;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent, .tech-parent, .contact-parent  {
     grid-column: 1/10;
   }
 
   .projects-view {
     font-size: 1rem;
   }
+
+  .youtube {
+    padding-top: 1rem;
+  }
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -364,14 +457,20 @@ iframe {
     grid-column: 1/9;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent,  .tech-parent, .contact-parent  {
     grid-column: 1/9;
   }
+
+
 }
 
 @media screen and (max-width: 1048px) {
   .apodGIF, .usersGIF {
     width: 14rem;
+  }
+
+  .apod .explanation {
+    padding-top: 0;
   }
 }
 
@@ -384,8 +483,13 @@ iframe {
     grid-column: 1/8;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent, .tech-parent, .contact-parent  {
     grid-column: 1/8;
+  }
+
+  .tech-container {
+    font-size: 2.5rem;
+    width: 80%;
   }
 
   iframe {
@@ -404,12 +508,24 @@ iframe {
     grid-column: 1/7;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent,  .tech-parent, .contact-parent  {
     grid-column: 1/7;
   }
 
   .projects-view {
     font-size: .9rem;
+  }
+
+  .more-view {
+    font-size: 1rem;
+  }
+
+  .more-parent h1 {
+    font-size: 1.75rem;
+  }
+
+  .more-view img {
+    width: 14rem;
   }
 
 
@@ -454,16 +570,21 @@ iframe {
   .nav-parent {
     grid-column: 6/15;
     grid-row: 2/21;
-  
+    line-height: 1;
   }
   .about-parent {
     grid-column: 1/6;
     grid-row: 2/20;
   }
 
-  .projects-parent {
+  .projects-parent, .more-parent {
     grid-column: 1/6;
     grid-row: 2;
+  }
+
+  .tech-parent, .contact-parent {
+    grid-column: 1/6;
+    grid-row: 5;
   }
 
   .projects-view {
@@ -472,8 +593,30 @@ iframe {
     flex-wrap:wrap;
   }
 
+  .more-container {
+    height: auto;
+  }
+  
+  .more-view {
+    flex-direction: column;
+   text-align: center;
+  }
+
+  .leetcode, .codepen {
+    padding-top: 0;
+  }
+
+  .leetcode-text, .codepen-text {
+    margin: 0 auto;
+    padding: .5rem;
+  }
   .apod h1, .users h1 {
     padding-top: 2rem;
+  }
+
+  .tech-container {
+    font-size: 2rem;
+
   }
 
 }
@@ -483,7 +626,7 @@ iframe {
     grid-column: 5/17;
   }
 
-  .projects-parent, .about-parent {
+  .projects-parent, .about-parent, .more-parent,  .tech-parent, .contact-parent  {
     grid-column: 1/5;
   }
 }
@@ -508,6 +651,16 @@ iframe {
   .apod h1, .users h1 {
     padding-top: 2rem;
   }
+
+  .more-parent h1 {
+    padding: 3rem;
+  }
+
+  .leetcode, .codepen {
+    margin: 0; 
+    padding: 0;
+    font-size: .9rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -518,7 +671,7 @@ iframe {
     grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
   }
 
-  .about-parent, .projects-parent {
+  .about-parent, .projects-parent, .more-parent,  .tech-parent, .contact-parent  {
     grid-row: 5/19;
     grid-column: 1/31;
   }
@@ -586,6 +739,12 @@ iframe {
     font-size: .85rem;
   }
 
+  .more-view img {
+    width: 12rem;
+  }
+  .more-parent h1 {
+    padding: 2rem;
+  }
   .explanation {
     margin: 0;
     padding: 0;
@@ -617,7 +776,7 @@ iframe {
     font-size: .9rem;
   }
   
-  .projects-parent {
+  .projects-parent, .more-parent,  .contact-parent  {
     max-width: 280px;
     display: flex;
     flex-direction: column;
@@ -628,6 +787,10 @@ iframe {
     flex-direction: column;
     margin: 0;
     padding: 0;
+  }
+   
+  .tech-parent {
+    transform: translateY(-50px);
   }
   
 }

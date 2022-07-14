@@ -5,6 +5,7 @@ import './index.css';
 import App from './App';
 import "@fontsource/nothing-you-could-do";
 import "@fontsource/maven-pro";
+import "@fontsource/fredoka-one";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

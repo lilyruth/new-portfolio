@@ -8,7 +8,7 @@ function Projects() {
 
   const contentProps = useSpring({
     to: { opacity: 1, y: 0 },
-    from: { opacity: 0, y: -1000 },
+    from: { opacity: 0, y: 1000 },
     delay: 200,
   })
 

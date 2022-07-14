@@ -4,9 +4,9 @@ import { Routes, Route } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring';
 import About from './Components/Content/About';
 import Contact from './Components/Content/Contact';
-import More from './Components/Content/More';
+import More from './Components/Content/More/More';
 import Projects from './Components/Content/Projects/Projects';
-import TechStack from './Components/Content/TechStack';
+import TechStack from './Components/Content/TechStack/TechStack';
 import Footer from './Components/Footer/Footer';
 
 function App() {
