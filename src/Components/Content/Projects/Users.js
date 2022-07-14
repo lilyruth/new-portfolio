@@ -1,8 +1,16 @@
-import usersGif from './users.gif'
+import usersGif from './users.gif';
+import { animated, useSpring } from 'react-spring';
 
 function Users() {
+
+  const projectProps = useSpring({
+    to: { opacity: 1, },
+    from: { opacity: 0 },
+    delay: 200,
+  })
+
   return (
-    <div className='users'>
+    <animated.div className='users' style={projectProps}>
     <h1>Retrieving Users and Posts from an API</h1>
     <div className="projects-media">
       <div className="youtube">
@@ -31,7 +39,7 @@ function Users() {
       </div>
     </div>
 
-  </div>
+  </animated.div>
   )
 }
 

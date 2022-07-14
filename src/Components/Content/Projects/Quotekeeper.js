@@ -1,10 +1,16 @@
-
+import {useSpring, animated} from 'react-spring';
 
 function Quotekeeper() {
 
+ const projectProps = useSpring({
+  to: { opacity: 1, },
+  from: { opacity: 0 },
+  delay: 200,
+})
+
  return (
 
-  <div className='quotekeeper'>
+  <animated.div className='quotekeeper' style={projectProps}>
    <h1>QuoteKeeper</h1>
    <div className="projects-media">
     <div className="youtube">
@@ -32,7 +38,7 @@ function Quotekeeper() {
     <a href="https://quotekeeper.io" target="_blank" className="pl live-project">QuoteKeeper.io</a>
    </div>
    <p className="test">Test the app with email <strong>doodlepathapps@gmail.com</strong> and password <strong>Testing123!</strong></p>
-  </div>
+  </animated.div>
  )
 }
 

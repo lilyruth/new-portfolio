@@ -1,8 +1,16 @@
 import apodGif from './APOD.gif';
+import { animated, useSpring } from 'react-spring';
 
 function APOD() {
+
+  const projectProps = useSpring({
+    to: { opacity: 1, },
+    from: { opacity: 0 },
+    delay: 200,
+  })
+
   return (
-    <div className='apod'>
+    <animated.div className='apod' style={projectProps}>
       <h1>NASA Photo of the Day</h1>
       <div className="projects-media">
         <div className="youtube">
@@ -29,7 +37,7 @@ function APOD() {
         </div>
       </div>
 
-    </div>
+    </animated.div>
   )
 }
 
