@@ -50,13 +50,13 @@ nav,
 
 .title-parent {
   grid-column: 1/17;
-  grid-row: 1/2;
+  grid-row: 1;
 }
 
 
 .nav-parent {
   grid-column: 14/17;
-  grid-row: 5/29;
+  grid-row: 2/29;
 }
 
 .title-bar {
@@ -82,9 +82,7 @@ nav,
   height: 4rem;
   width: 4rem;
 }
-.projects-parent, .more-parent, .about-parent, .contact-parent {
-  overflow-y: scroll;
-}
+
 
 .sidenav-parent {
   text-align: right;
@@ -104,7 +102,7 @@ nav,
 
 
 .about-parent {
-  grid-row: 5/28;
+  grid-row: 2/28;
   grid-column: 1/14;
   display: flex;
   align-items: center;
@@ -125,7 +123,7 @@ nav,
 }
 
 .projects-parent {
-  grid-row: 5/28;
+  grid-row: 2/28;
   grid-column: 1/14;
   margin: 0 auto;
   width: 100%;
@@ -139,7 +137,7 @@ nav,
 }
 
 .more-parent, .tech-parent, .contact-parent {
-  grid-row: 5/28;
+  grid-row: 2/28;
   grid-column: 1/14;
   margin: 0 auto;
   width: 100%;
@@ -226,8 +224,8 @@ input, label, textarea {
 }
 
 .leetcode, .codepen {
-  margin: 2rem;
-  padding-top: 2rem;
+  margin: 1rem;
+
 }
 
 .leetcode img, .codepen img {
@@ -238,6 +236,7 @@ input, label, textarea {
 .leetcode a, .codepen a {
   cursor: pointer;
   padding-top: 1rem;
+  color: var(--main-text);
 }
 
 .leetcode-text, .codepen-text {
@@ -360,7 +359,7 @@ iframe {
 .project-links {
   display: inline-flex;
   flex-direction: wrap;
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .pl {
@@ -518,7 +517,7 @@ iframe {
 
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1101px) {
 
   .nav-parent {
     grid-column: 9/17;
@@ -531,6 +530,11 @@ iframe {
     grid-column: 1/9;
   }
 
+  iframe {
+    width: 400px;
+    height: 225px;
+  }
+
 
 }
 
@@ -541,6 +545,10 @@ iframe {
 
   .apod .explanation {
     padding-top: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 }
 
@@ -562,25 +570,13 @@ iframe {
     width: 80%;
   }
 
-  iframe {
-    width: 400px;
-    height: 225px;
-  }
+
 }
 
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 950px) {
 
-  .nav-parent {
-    grid-column: 7/17;
-  }
-  .about-parent {
-    grid-column: 1/7;
-  }
 
-  .projects-parent, .more-parent,  .tech-parent, .contact-parent  {
-    grid-column: 1/7;
-  }
 
   .projects-view {
     font-size: .9rem;
@@ -622,15 +618,24 @@ iframe {
   }
 
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 
   iframe {
     width: 250px;
     height: 141px;
   }
+  .projects-parent h1 {
+    font-size: 1.5rem;
+    padding: .25rem;
+  }
 
+  .apod h1, .users h1, .apod h2, .users h2 {
+  
+    padding: .25rem;
+  }
   .projects-media {
     flex-direction: column;
+    padding: .25rem;
   }
 
   .youtube {
@@ -647,15 +652,16 @@ iframe {
     grid-row: 2/20;
   }
 
-  .projects-parent, .more-parent {
-    grid-column: 1/6;
-    grid-row: 2;
+   .nav-parent {
+    grid-column: 7/17;
+  }
+  .about-parent {
+    grid-column: 1/7;
   }
 
-  .tech-parent, .contact-parent {
-    grid-column: 1/6;
-    grid-row: 5;
-  }
+  .projects-parent, .more-parent,  .tech-parent, .contact-parent  {
+    grid-column: 1/7;
+  } 
 
   .projects-view {
     display: flex;
@@ -680,9 +686,7 @@ iframe {
     margin: 0 auto;
     padding: .5rem;
   }
-  .apod h1, .users h1 {
-    padding-top: 2rem;
-  }
+
 
   .tech-container {
     font-size: 2rem;
@@ -690,6 +694,25 @@ iframe {
   }
 
 }
+
+@media screen and (max-width: 700px) {
+     .nav-parent {
+    grid-column-start: 6;
+  }
+  .about-parent {
+    grid-column: 1/6;
+  }
+
+  .projects-parent, .more-parent,  .tech-parent, .contact-parent  {
+    grid-column: 1/6;
+  } 
+
+  .about {
+    font-size: 1rem;
+  }
+}
+
+
 
 @media screen and (max-width: 599px) {
   .nav-parent {
@@ -747,7 +770,7 @@ iframe {
   }
 
   .nav-parent {
-    grid-row: 3/4;
+    grid-row: 4;
     grid-column: 1/31;
   }
 
@@ -896,8 +919,49 @@ iframe {
     padding: 0;
   }
    
-  .tech-parent {
-    transform: translateY(-50px);
+  .tech-container {
+    transform: translateY(-10%)
   }
+ 
   
 }
+
+@media screen and (max-height: 600px) {
+  .more-view img {
+    display: none;
+   }
+ 
+ 
+   .youtube {
+     display: none;
+ }
+
+  .about {
+    font-size: .9rem;
+  }
+  
+  .youtube {
+    margin: 0 auto;
+    align-self: center;
+  }
+
+
+  h1, label {
+    font-size: 1rem;
+  }
+
+ .quotekeeper .explanation {
+   display: none;
+ }
+
+ .explanation ul {
+   display: none;
+ }
+
+ textarea, label, input, button {
+   padding: 0;
+   margin: .25rem;
+ }
+
+}
+

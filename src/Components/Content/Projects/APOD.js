@@ -17,7 +17,7 @@ function APOD() {
           <img className="apodGIF" src={apodGif} alt="screenshot of app retrieving images from the NASA photo of the day API" />
         </div>
         <div className="explanation">
-          This is a simple API retrieval app:
+          This is a simple API retrieval app.
           <br /><br />
           <ul>
             <li>It uses a proxy server to hide the API key.</li>

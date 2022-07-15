@@ -17,7 +17,7 @@ function Users() {
         <img className="usersGIF" src={usersGif} alt="screenshot of a project using the jsonplaceholder api"/>
       </div>
       <div className="explanation">
-        This is a simple API retrieval app written in vanilla JS:
+        This is a simple API retrieval app written in vanilla JS.
         <br /><br />
         <ul>
           <li>The users are retrieved from an API and placed in a table.</li>

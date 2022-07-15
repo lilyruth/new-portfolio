@@ -2,7 +2,9 @@
 
 My previous portfolio iterations were vanilla JavaScript, so the big change for this portfolio was the move to React. I utilized React Router for navigation, React Spring (https://react-spring.dev/) for transitions, and Formspree to handle the contact form (this is a time-based placeholder, I will eventually add a blog and backend to handle the blog as well as the contact form). 
 
-I wanted to learn Tailwind CSS for this project, but in their documentation they recommend using it with another framework such as Remix. I plan on learning Remix, but needed to go ahead and get a new portfolio deployed asap. So for this project I stuck to plain CSS for the styling. 900 lines later, it needs some work to be fully responsive without scroll, but all parts should at least be readable on all environments at this point, even if some environments do require an overflow scroll. 
+I wanted to learn Tailwind CSS for this project, but in their documentation they recommend using it with another framework such as Remix. I plan on learning Remix, but needed to go ahead and get a new portfolio deployed asap. So for this project I stuck to plain CSS for the styling. 
+
+I used a lot of media queries, including max-height queries, to make this responsive for almost every possible environment. 
 
 This portfolio is structured into five main sections: About, Projects, More, Tech Stack and Contact. There is a stationary header, menu and footer. 
 
