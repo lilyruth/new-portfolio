@@ -29,6 +29,18 @@ body {
   height: 100vh;
 }
 
+body::webkit-scrollbar-track-piece {
+  background: var(--light-cream);
+}
+
+body::webkit-scrollbar-thumb {
+  background: var(--light-main);
+}
+
+body::webkit-scrollbar-hover {
+  background: var(--main);
+}
+
 nav,
 .title-bar {
   font-family: var(--header-font);
@@ -70,7 +82,9 @@ nav,
   height: 4rem;
   width: 4rem;
 }
-
+.projects-parent, .more-parent, .about-parent, .contact-parent {
+  overflow-y: scroll;
+}
 
 .sidenav-parent {
   text-align: right;
@@ -103,7 +117,7 @@ nav,
   margin: 0 auto;
   max-width: 40rem;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.25;
   font-size: 1.25rem;
   font-family: var(--body-font);
   color: var(--main-text);
@@ -152,7 +166,7 @@ nav,
 .contact-form {
   width: 25rem;
   align-items:stretch;
-  margin: 2rem auto;
+  margin: 1rem auto;
   font-size: 1.5rem;
 }
 
@@ -167,7 +181,7 @@ nav,
   border-style: none;
   font-size: 1rem;
   color: var(--light-cream);
-  box-shadow: 2px 2px 5px 2px #3f4359;
+  box-shadow: 2px 2px 4px 2px #3f4359;
 }
 
 .form-button:hover {
@@ -183,6 +197,7 @@ input, textarea {
   border-radius: 5px;
   border: 2px solid var(--main);
   font-size: 1.15rem;
+  box-shadow: 2px 2px 4px 2px #3f4359;
 }
 
 input:focus, textarea:focus, button:focus {
@@ -300,11 +315,7 @@ iframe {
   line-height: 1.5;
 }
 
-.projects-view h1 {
-  padding-bottom: 2rem;
-}
-
-.apod h1, .users h1 {
+.apod h1, .users h1, .quotekeeper h1 {
   padding: .5rem;
 }
 
@@ -359,7 +370,7 @@ iframe {
 }
 
 .test {
-  padding-top: 1rem;
+  padding: .5rem;
 }
 
 .footer-parent {
@@ -730,7 +741,7 @@ iframe {
     grid-template-rows: repeat(auto-fit, minmax(1rem, 1fr));
   }
 
-  .about-parent, .projects-parent, .more-parent,  .tech-parent, .contact-parent  {
+  .about-parent, .more-parent, .projects-parent, .tech-parent, .contact-parent  {
     grid-row: 5/19;
     grid-column: 1/31;
   }
@@ -802,7 +813,7 @@ iframe {
     width: 12rem;
   }
   .more-parent h1 {
-    padding: 2rem;
+    padding: 1rem;
   }
   .explanation {
     margin: 0;
@@ -829,12 +840,41 @@ iframe {
   .contact-form {
     width: 15rem;
     align-items:stretch;
-    margin: 2rem auto;
+    margin: 1rem auto;
     font-size: 1.5rem;
   }
-  
+  .quotekeeper h2 {
+    margin-bottom: .25rem;
+  }
+  .project-links {
+    padding: 0;
+  }
+  .explanation {
+    line-height: .9;
+  }
+   .projects-media {
+     padding: .25rem .5rem;
+   }
 
+   p.test {
+     padding-top: .25rem;
+   }
 
+   .more-view img {
+     width: 150px;
+   }
+   
+   .contact-parent h1 {
+     font-size: 1.5rem;
+   }
+
+   .contact-form label {
+     font-size: 1.25rem;
+   }
+
+   .apod-project-links a {
+     padding: .25rem 0;
+   }
 }
 
 @media screen and (max-width: 300px) {
@@ -843,7 +883,7 @@ iframe {
     font-size: .9rem;
   }
   
-  .projects-parent, .more-parent,  .contact-parent  {
+  .projects-parent, .more-parent,  .contact-parent, .about-parent  {
     max-width: 280px;
     display: flex;
     flex-direction: column;
