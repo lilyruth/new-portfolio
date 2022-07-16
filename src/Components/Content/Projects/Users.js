@@ -10,11 +10,9 @@ function Users() {
   })
 
   return (
-    <animated.div className='users' style={projectProps}>
-    <h1>Retrieving Users and Posts from an API</h1>
-    <div className="projects-media">
+    <animated.div className='quotekeeper' style={projectProps}>
       <div className="youtube">
-        <img className="usersGIF" src={usersGif} alt="screenshot of a project using the jsonplaceholder api"/>
+        <img className="usersGIF" src={usersGif} alt="screenshot of a project using the jsonplaceholder api" />
       </div>
       <div className="explanation">
         This is a simple API retrieval app written in vanilla JS.
@@ -27,19 +25,18 @@ function Users() {
 
 
         </ul>
-
-        <h2>Project Links</h2>
-        <div className="apod-project-links">
-          <a href="https://github.com/lilyruth/takeHome041622" target="_blank" className="pl github">Project Repo</a>
-          <a href="https://041622.netlify.app" target="_blank" className="pl live-project">Live Project</a>
-
-          <a href="https://github.com/lilyruth/react041622" target="_blank" className="pl github">Project in React</a>
-          <a href="https://041622remix.netlify.app" target="_blank" className="pl live-project">Live Project in React</a>
-        </div>
       </div>
-    </div>
 
-  </animated.div>
+      <div className="project-links users-links">
+        <h3>Project Links</h3>
+        <a href="https://github.com/lilyruth/takeHome041622" target="_blank" className="pl github">Project Repo</a>
+        <a href="https://041622.netlify.app" target="_blank" className="pl live-project">Live Project</a>
+
+        <a href="https://github.com/lilyruth/react041622" target="_blank" className="pl github">Project in React</a>
+        <a href="https://041622remix.netlify.app" target="_blank" className="pl live-project">Live Project in React</a>
+      </div>
+
+    </animated.div>
   )
 }
 

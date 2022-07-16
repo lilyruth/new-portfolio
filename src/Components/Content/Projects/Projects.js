@@ -16,11 +16,15 @@ function Projects() {
   let [displayAPOD, setDisplayAPOD] = useState(false);
   let [displayUsers, setDisplayUsers] = useState(false);
 
+  let [heading, setHeading] = useState('Quotekeeper');
+
+
   const handleQuotekeeper = () => {
 
     setDisplayAPOD(false);
     setDisplayUsers(false);
     setDisplayQuotekeeper(true);
+    setHeading('QuoteKeeper');
   };
 
   const handleAPOD = () => {
@@ -28,12 +32,14 @@ function Projects() {
     setDisplayAPOD(true);
     setDisplayUsers(false);
     setDisplayQuotekeeper(false);
+    setHeading('NASA Photo of the Day');
   };
   const handleUsers = () => {
 
     setDisplayAPOD(false);
     setDisplayUsers(true);
     setDisplayQuotekeeper(false);
+    setHeading('Users and Posts from an API');
   };
 
   return (
@@ -43,6 +49,8 @@ function Projects() {
         <div className="apod-menu" onClick={handleAPOD}>NASA Photos</div>
         <div className="users-menu" onClick={handleUsers}>Users from API</div>
       </div>
+
+      <div className="heading"><h2>{heading}</h2></div>
       <div className="projects-view">
 
       {displayQuotekeeper && <Quotekeeper />}

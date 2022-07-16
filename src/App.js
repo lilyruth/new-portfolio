@@ -14,19 +14,19 @@ function App() {
   const titleProps = useSpring({
     to: { opacity: 1, x: 0 },
     from: { opacity: 0, x: -1000 },
-    delay: 200,
+    delay: 333,
   })
 
   const navProps = useSpring({
-    to: { opacity: 1, y: 0 },
-    from: { opacity: 0, y: 1000 },
-    delay: 400,
+    to: { opacity: 1},
+    from: { opacity: 0},
+    delay: 1000,
   })
 
   const footerProps = useSpring({
     to: { opacity: 1, x: 0 },
     from: { opacity: 0, x: 1000 },
-    delay: 600,
+    delay: 667,
   })
 
 
