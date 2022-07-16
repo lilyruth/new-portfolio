@@ -305,6 +305,7 @@ iframe {
 
 .leetcode-text, .codepen-text {
   width: 20rem;
+  line-height: 2;
 }
 
 .more-container *{
@@ -546,6 +547,7 @@ input, label, textarea {
 
   .leetcode-text, .codepen-text {
     width: 12rem;
+    line-height: 1.25;
   }
 
   .sidenav-parent {
@@ -614,6 +616,10 @@ textarea {
 .more-container * {
   padding: 0;
   margin: .1rem;
+}
+
+.leetcode-text, .codepen-text {
+  line-height: 1.05;
 }
 
 
