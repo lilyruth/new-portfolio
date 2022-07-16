@@ -262,7 +262,7 @@ iframe {
   text-align: center;
 }
 
-.apod-links a, .users-links a {
+.project-links a, .apod-links a, .users-links a {
   color: var(--main-text);
 }
 
