@@ -262,7 +262,7 @@ iframe {
   text-align: center;
 }
 
-.project-links a, .apod-links a, .users-links a {
+.project-links a, .apod-links a, .users-links a, .leetcode-text a, .codepen-text a {
   color: var(--main-text);
 }
 
