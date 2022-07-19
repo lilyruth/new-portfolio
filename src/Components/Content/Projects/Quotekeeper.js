@@ -36,7 +36,7 @@ function Quotekeeper() {
         <a href="https://github.com/lilyruth/newQuoteKeeperServer" target="_blank" className="pl github2">Quotekeeper Server Repo</a>
 
         <a href="https://quotekeeper.io" target="_blank" className="pl live-project">QuoteKeeper.io</a>
-
+        <br />
         <p className="test">Test the app with email <strong>doodlepathapps@gmail.com</strong> and password <strong>Testing123!</strong></p>
       </div>
     </animated.div>
