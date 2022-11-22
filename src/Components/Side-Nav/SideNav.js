@@ -12,8 +12,6 @@ function SideNav() {
 
     <li><Link className="menu-tech-stack nav-links" to="tech-stack">tech stack</Link></li>
 
-    <li><Link className="menu-contact nav-links" to="contact">contact</Link></li>
-
   </ul>
  )
 }
